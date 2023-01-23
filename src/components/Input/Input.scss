@@ -1,0 +1,44 @@
+$dark-grey: hsl(0, 0%, 59%);
+$darker-grey: hsl(0, 0%, 17%);
+.background {
+  height: 250px;
+  display: flex;
+  //   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 2rem;
+
+  .title {
+    padding: 1rem;
+    color: white;
+  }
+
+  input {
+    padding: 0px 16px;
+    width: 400px;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    &[type="text"] {
+      font-size: 16px;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    height: 45px;
+    padding: 0px 16px;
+    background-color: $darker-grey;
+    color: white;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &:hover {
+      cursor: pointer;
+      background-color: $dark-grey;
+    }
+  }
+}
