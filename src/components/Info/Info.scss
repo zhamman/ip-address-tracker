@@ -1,5 +1,4 @@
 .container {
-  height: 150px;
   position: absolute;
   display: flex;
   justify-content: space-between;
@@ -17,9 +16,16 @@
   top: 180px;
   background-color: white;
   box-shadow: 1px 1px 20px rgb(101, 101, 101);
+  @media screen and (max-width: 768px) {
+    top: 200px;
+  }
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    top: 180px;
+    width: 65%;
+  }
 
   .section {
-    height: 120px;
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -27,10 +33,22 @@
     padding: 1rem;
     align-items: start;
 
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+    }
+    @media screen and (max-width: 550px) {
+      align-items: center;
+      padding: 0 2rem;
+      width: 100%;
+    }
+
     .header {
       color: gray;
       font-family: "Rubik", sans-serif;
       font-size: 12px;
+      @media screen and (max-width: 768px) {
+        font-size: 0.6rem;
+      }
     }
     .text {
       height: 80px;
@@ -44,6 +62,18 @@
       font-weight: 600;
       font-size: 18px;
       overflow: hidden;
+
+      @media screen and (max-width: 768px) {
+        font-size: 0.8rem;
+        height: 60px;
+      }
+      @media screen and (max-width: 550px) {
+        padding: 2px 0;
+        border-right: 0;
+        padding-right: 0rem;
+        justify-content: center;
+        text-align: center;
+      }
     }
     .last {
       border: none;
